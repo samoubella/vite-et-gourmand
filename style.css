@@ -1,48 +1,71 @@
-*{
-    box-sizing: border-box;
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-:root {
-    --primary: #f1c40f;   /* Jaune */
-    --dark: #111;        /* Noir */
-    --light: #f4f4f4;
+    background-color: #fdf6e3;
+    color: #333;
 }
 
-
-body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fafafa;
-    color: #333; ;
-
-}
-header{
-    background-color: #e63946;
+header {
+    background-color: #ff6f61;
     color: white;
+    padding: 20px;
     text-align: center;
-    padding: 3rem;
 }
 
-
-.presentation .menu{
-    
-padding: 3rem;
-max-width: 900px;
-margin: auto;
+header nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
 }
-.menu ul{
-    list-style:none ;
-    padding: 0.5rem 0;
-    border-bottom: 1px solide black;
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card h3 {
+    margin: 0;
+}
+
+.card p {
+    margin: 5px 0;
 }
 
 .card span {
-    color: var(--primary);
+    font-weight: bold;
+    color: #ff6f61;
 }
 
-footer{
-    text-align: center;
-    padding: 1rem;
-    background-color: #222;
+footer {
+    background-color: #333;
     color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
 }
