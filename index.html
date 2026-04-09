@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite et Gourmand - Menu Noël</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+    <div class="logo-titre">
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <div>
+            <h1>Vite et Gourmand</h1>
+            <p>Rapide, frais et gourmand</p>
+        </div>
+    </div>
+    <nav class="navbar">
+        <a href="index.html">Accueil</a>
+        <a href="menus.html">Menus</a>
+        <a href="inscription.html">Inscription</a>
+    </nav>
+</header>
+
+<!-- Main -->
+<main>
+
+    <!-- Présentation de l'entreprise -->
+    <section class="presentation">
+        <h2>Présentation de l'entreprise</h2>
+        <p>
+            Vite et Gourmand est une entreprise qui existe depuis 2 ans, gérée par Julie et José. 
+            Elle propose des menus pour toutes occasions, livrés frais et prêts à déguster. 
+            Les menus évoluent régulièrement et sont envoyés par mail aux habitués. 
+            Pour gagner en visibilité, ils ont pensé à créer une application pour proposer leurs menus facilement.
+        </p>
+    </section>
+
+    <!-- Menu Noël -->
+    <section class="menus">
+        <h2>Nos Menus</h2>
+
+        <div class="menu-card">
+            <h3>Menu Festif de Noël</h3>
+
+            <!-- Galerie -->
+            <div class="galerie">
+                <div class="galerie-item">
+                    <img src="images/noel1.jpg" alt="Plat Noël">
+                    <p>Filet de poulet croustillant, salade fraîche, tomate, fromage fondant et sauce maison dans un pain brioché.</p>
+                </div>
+                <div class="galerie-item">
+                    <img src="images/noel2.png" alt="Dessert Noël">
+                    <p>Gâteau au chocolat chaud avec un cœur fondant, servi avec un peu de sucre glace.</p>
+                </div>
+            </div>
+
+            <p>Description : Un menu complet pour vos fêtes.</p>
+            <p>Prix : 20€ / 2 personnes</p>
+            <p>Stock : 5 commandes disponibles</p>
+
+            <!-- Formulaire de commande -->
+            <form class="order-form">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required><br>
+
+                <label for="quantite">Quantité :</label>
+                <input type="number" id="quantite" name="quantite" min="1" max="5" value="1">
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit">Commander</button>
+            </form>
+        </div>
+        <div class="menu-card">
+    <h3>Menu Vegan</h3>
+
+    <!-- Galerie -->
+    <div class="galerie">
+        <div class="galerie-item">
+            <img src="images/vegan1.jpg" alt="Plat Vegan">
+            <p>Salade quinoa, pois chiches, avocat et légumes frais, assaisonnée d’une vinaigrette maison.</p>
+        </div>
+
+        <div class="galerie-item">
+            <img src="images/vegan3.jpg" alt="Dessert Vegan">
+            <p>Mousse au chocolat à base de tofu soyeux et cacao, légère et gourmande.</p>
+        </div>
+    </div>
+
+    <p>Description : Menu complet 100% vegan.</p>
+    <p>Prix : 18€ / 2 personnes</p>
+    <p>Stock : 5 commandes disponibles</p>
+
+    <!-- Formulaire de commande -->
+    <form class="order-form">
+        <label for="nom-vegan">Nom :</label>
+        <input type="text" id="nom-vegan" name="nom" required>
+
+        <label for="quantite-vegan">Quantité :</label>
+        <input type="number" id="quantite-vegan" name="quantite" min="1" max="5" value="1">
+
+        <label for="email-vegan">Email :</label>
+        <input type="email" id="email-vegan" name="email" required>
+
+        <button type="submit">Commander</button>
+    </form>
+</div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+     <p>&copy; 2026 Vite et Gourmand</p>
+    <p>Horaires : Lundi - Vendredi</p>
+    <p><a href="#">Mentions légales</a></p>
+</footer>
+
+</body>
+</html>
