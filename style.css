@@ -71,13 +71,15 @@ body {
 
 .menu-card {
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 .menu-card:hover {
@@ -133,6 +135,67 @@ body {
     margin-top: 10px;       /* espace par rapport à l’image et texte */
 }
 
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+    width: 100%;
+    padding: 0 15px;
+    
+}
+
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    padding: 15px;
+}
+
+.order-form label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.order-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+    margin-right: 25px;
+}
+
+.order-form input:focus {
+    border-color: orange;
+    box-shadow: 0 0 5px rgba(255,165,0,0.5);
+    
+    
+}
+
+.order-form button {
+    padding : 12px;
+    background: linear-gradient(135deg, orange, darkorange);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-right: 25px;
+    
+}
+
+.order-form button:hover {
+    transform: scale(1.05);
+}
+
+
+.order-form button:hover {
+    background-color: darkorange;
+}
+
 .galerie .menu-card .order-form input {
     padding: 8px;
     border: 1px solid #ccc;
@@ -165,27 +228,68 @@ footer {
 /* ==========================
    Responsive
    ========================== */
-@media (max-width: 768px) {
-    .menus {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        padding: 20px;
-    }
-}
-
 @media (max-width: 480px) {
     .site-header {
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
+        text-align: center;
     }
 
     .navbar {
         flex-direction: column;
-        gap: 10px;
         width: 100%;
-        
+        margin-top: 10px;
     }
-    .navbar a{
+
+    .navbar a {
+        display: block;
         width: 100%;
-        padding: 10px 0;
+        padding: 12px;
+        background-color: rgba(255,255,255,0.2);
+        border-radius: 5px;
+    }
+    @media (max-width: 768px) {
+
+    .site-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar a {
+        width: 100%;
+    }
+
+    .menus {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .galerie {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .galerie-item {
+        max-width: 100%;
+    }
+
+    .order-form input,
+    .order-form button {
+        width: 100%;
+        margin-right: 0;
     }
 }
+
+@media (max-width: 768px) {
+    .order-form input,
+    .order-form button {
+        margin-right: 0;
+        width: 100%;
+    }
+}
+   }
