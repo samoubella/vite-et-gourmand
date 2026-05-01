@@ -1,4 +1,3 @@
-
 // Sélectionne tous les formulaires
 const forms = document.querySelectorAll(".order-form");
 
@@ -7,13 +6,13 @@ forms.forEach(form => {
         e.preventDefault(); // empêche le rechargement
 
         // récupérer les valeurs
-        const nom = form.querySelector("input[name='nom']").value;
-        const email = form.querySelector("input[name='email']").value;
-        const quantite = form.querySelector("input[name='quantite']").value;
+        const nom = form.querySelector("[name='nom']").value.trim();
+        const email = form.querySelector("[name='email']").value.trim();
+        const quantite = form.querySelector("[name='quantite']").value;
 
         // vérification simple
         if (nom === "" || email === "") {
-            alert("Veuillez remplir tous les champs !");
+            alert("Veuillez remplir le formulaire !");
             return;
         }
 
